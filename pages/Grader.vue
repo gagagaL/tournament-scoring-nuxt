@@ -1,0 +1,59 @@
+<template>
+  <v-row justify="center" align="center">
+    <v-col cols="12" sm="8" md="6">
+      <v-card>
+        <v-card-title class="headline">
+          採点者ページ
+        </v-card-title>
+        <p>
+          <v-btn
+            color="primary"
+            outlined
+            block
+            elevation="20"
+            to="/grader"
+          >1</v-btn>
+        </p>
+        <p>
+          <v-btn
+            color="primary"
+            outlined
+            block
+            elevation="20"
+            to="/grader"
+          >2</v-btn>
+        </p>
+        <p>
+          <v-btn
+            color="primary"
+            outlined
+            block
+            elevation="20"
+            to="/grader"
+          >3</v-btn>
+        </p>
+        <p>
+          <v-btn
+            color="primary"
+            outlined
+            block
+            elevation="20"
+            to="/grader"
+          >Reset</v-btn>
+      </p>
+      <hr />
+        <p>
+        <v-btn
+          color="danger"
+          outlined
+          block
+          elevation="20"
+          to="/grader"
+        >OK</v-btn>
+        </p>
+        <v-card-actions>
+        </v-card-actions>
+      </v-card>
+    </v-col>
+  </v-row>
+</template>

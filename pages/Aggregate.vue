@@ -3,17 +3,10 @@
     <v-col cols="12" sm="8" md="6">
       <v-card>
         <v-card-title class="headline">
-          Welcome to the Vuetify + Nuxt.js template
+          集計
         </v-card-title>
-          <p>
-            <v-btn
-              color="primary"
-              outlined
-              block
-              elevation="20"
-              to="/grader"
-            >採点ページ</v-btn>
-          </p>
+        <p>
+        </p>
         <v-card-actions>
         </v-card-actions>
       </v-card>
