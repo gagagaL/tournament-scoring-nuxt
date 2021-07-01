@@ -4,9 +4,9 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - tournament-scoring-nuxt',
-    title: '得点集計機',
+    title: 'tournament-scoring-nuxt',
     htmlAttrs: {
-      lang: 'ja'
+      lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
