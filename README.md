@@ -76,4 +76,3 @@ v14.0.0
 ```
 nuxt-socket-ioについて  
 https://github.com/richardeschloss/nuxt-socket-io#readme
-
