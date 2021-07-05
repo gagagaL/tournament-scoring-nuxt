@@ -5,6 +5,7 @@
         <v-card-title class="headline">
           採点者ページ
         </v-card-title>
+        <span>{{score}}</span>
         <p>
           <v-btn
             color="primary"
@@ -12,6 +13,7 @@
             block
             elevation="20"
             to="/grader"
+            @click="one"
           >1</v-btn>
         </p>
         <p>
@@ -21,6 +23,7 @@
             block
             elevation="20"
             to="/grader"
+            @click="two"
           >2</v-btn>
         </p>
         <p>
@@ -30,6 +33,7 @@
             block
             elevation="20"
             to="/grader"
+            @click="three"
           >3</v-btn>
         </p>
         <p>
@@ -39,6 +43,7 @@
             block
             elevation="20"
             to="/grader"
+            @click="zero"
           >Reset</v-btn>
       </p>
         <p>
@@ -60,11 +65,11 @@
       >
         <v-card>
           <v-card-title class="text-h5">
-            Use Google's location service?
+            以下の点数で確定しますか？
           </v-card-title>
 
           <v-card-text>
-            Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.
+            {{score}}
           </v-card-text>
 
           <v-card-actions>
@@ -93,10 +98,29 @@
 </template>
 <script>
 export default {
-  data () {
-    return {
-      dialog: false,
-    }
-  },
+    el: '#buttons',
+    data() {
+      return {
+        score: 0,
+        // user_id:1,
+        dialog: false
+      }
+    },
+    methods: {
+      one: function () {
+        this.score = 1;
+      },
+      two: function () {
+        this.score = 2;
+      },
+      three: function () {
+        this.score = 3;
+      },
+      zero: function () {
+        this.score = 0;
+      },
+    },
+    created: function() {
+    },
 }
 </script>
