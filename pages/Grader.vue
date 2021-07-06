@@ -98,29 +98,49 @@
 </template>
 <script>
 export default {
-    el: '#buttons',
-    data() {
-      return {
-        score: 0,
-        // user_id:1,
-        dialog: false
-      }
+  el: '#buttons',
+  data() {
+    return {
+      score: 0,
+      // user_id:1,
+      dialog: false
+    }
+  },
+  mounted() {
+    console.log(this.$nuxtSocket);
+    this.socket = this.$nuxtSocket({
+      channel: '/index'
+    })
+    /* Listen for events: */
+    // console.log(this.socket);
+    // this.socket.on('method1', (msg, cb) => {
+    //     // this.socket.id
+    //     /* Handle event */
+    //     console.log(msg)
+    //     console.log(cb)
+    //   })
+  },
+  methods: {
+    one: function () {
+      this.score = 1;
+      this.socket.emit('method1', {
+        hello: 'world'
+      }, (resp) => {
+        /* Handle response, if any */
+        console.log(resp);
+      })
     },
-    methods: {
-      one: function () {
-        this.score = 1;
-      },
-      two: function () {
-        this.score = 2;
-      },
-      three: function () {
-        this.score = 3;
-      },
-      zero: function () {
-        this.score = 0;
-      },
+    two: function () {
+      this.score = 2;
     },
-    created: function() {
+    three: function () {
+      this.score = 3;
     },
+    zero: function () {
+      this.score = 0;
+    },
+  },
+  created: function() {
+  },
 }
 </script>
