@@ -76,19 +76,17 @@
             <v-spacer></v-spacer>
 
             <v-btn
-              color="green darken-1"
-              text
+              color="red"
               @click="dialog = false"
             >
-              Disagree
+              やり直す
             </v-btn>
 
             <v-btn
               color="green darken-1"
-              text
-              @click="dialog = false"
+              @click="sent"
             >
-              Agree
+              確定する
             </v-btn>
           </v-card-actions>
         </v-card>
@@ -119,6 +117,11 @@ export default {
       zero: function () {
         this.score = 0;
       },
+      sent: function() {
+        // this.scoreを送る処理
+        this.score = 0;
+        this.dialog = false;
+      }
     },
     created: function() {
     },
