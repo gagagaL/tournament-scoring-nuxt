@@ -96,34 +96,34 @@
 </template>
 <script>
 export default {
-    el: '#buttons',
-    data() {
-      return {
-        score: 0,
-        // user_id:1,
-        dialog: false
-      }
+  el: '#buttons',
+  data() {
+    return {
+      score: 0,
+      // user_id:1,
+      dialog: false
+    }
+  },
+  methods: {
+    one: function () {
+      this.score = 1;
     },
-    methods: {
-      one: function () {
-        this.score = 1;
-      },
-      two: function () {
-        this.score = 2;
-      },
-      three: function () {
-        this.score = 3;
-      },
-      zero: function () {
-        this.score = 0;
-      },
-      sent: function() {
-        // this.scoreを送る処理
-        this.score = 0;
-        this.dialog = false;
-      }
+    two: function () {
+      this.score = 2;
     },
-    created: function() {
+    three: function () {
+      this.score = 3;
     },
+    zero: function () {
+      this.score = 0;
+    },
+    sent: function() {
+      // this.scoreを送る処理
+      this.score = 0;
+      this.dialog = false;
+    }
+  },
+  created: function() {
+  },
 }
 </script>
