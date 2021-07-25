@@ -37,16 +37,6 @@
           >3</v-btn>
         </p>
         <p>
-          <v-btn
-            color="primary"
-            outlined
-            block
-            elevation="20"
-            to="/grader"
-            @click="zero"
-          >Reset</v-btn>
-      </p>
-        <p>
         <v-btn
           color="danger"
           outlined
@@ -65,12 +55,8 @@
       >
         <v-card>
           <v-card-title class="text-h5">
-            以下の点数で確定しますか？
+            {{score}}点で確定しますか？
           </v-card-title>
-
-          <v-card-text>
-            {{score}}
-          </v-card-text>
 
           <v-card-actions>
             <v-spacer></v-spacer>
@@ -91,6 +77,26 @@
           </v-card-actions>
         </v-card>
       </v-dialog>
+      <v-dialog
+        v-model="confirm"
+        max-width="290"
+      >
+        <v-card>
+          <v-card-title class="text-h5">
+            送信しました
+          </v-card-title>
+
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn
+              color="green darken-1"
+              @click="ok"
+            >
+              OK
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
     </v-col>
   </v-row>
 </template>
@@ -101,7 +107,8 @@ export default {
     return {
       score: 0,
       // user_id:1,
-      dialog: false
+      dialog: false,
+      confirm: false
     }
   },
   methods: {
@@ -114,13 +121,14 @@ export default {
     three: function () {
       this.score = 3;
     },
-    zero: function () {
-      this.score = 0;
-    },
     sent: function() {
       // this.scoreを送る処理
-      this.score = 0;
       this.dialog = false;
+      this.confirm = true;
+      this.score = 0;
+    },
+    ok : function() {
+      this.confirm = false;
     }
   },
   created: function() {
