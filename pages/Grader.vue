@@ -2,17 +2,18 @@
   <v-row justify="center" align="center">
     <v-col cols="12" sm="8" md="6">
       <v-card>
-        <v-card-title class="headline">
+        <v-card-title class="headline text-lg-center">
           採点者ページ
         </v-card-title>
-        <span>{{score}}</span>
+        <h2 v-if="score >= 1" class="text-lg-center">{{score}}点</h2>
+        <h2 v-else class="text-lg-center">点数を選んでください</h2>
         <p>
           <v-btn
             color="primary"
             outlined
             block
             elevation="20"
-            to="/grader"
+            to="/Grader"
             @click="one"
           >1</v-btn>
         </p>
@@ -22,7 +23,7 @@
             outlined
             block
             elevation="20"
-            to="/grader"
+            to="/Grader"
             @click="two"
           >2</v-btn>
         </p>
@@ -32,19 +33,20 @@
             outlined
             block
             elevation="20"
-            to="/grader"
+            to="/Grader"
             @click="three"
           >3</v-btn>
         </p>
         <p>
         <v-btn
+          class="mt-10"
           color="danger"
           outlined
           block
           elevation="20"
-          to="/grader"
+          to="/Grader"
           @click.stop="dialog = true"
-        >OK</v-btn>
+        >送信する</v-btn>
         </p>
         <v-card-actions>
         </v-card-actions>
@@ -106,10 +108,13 @@ export default {
   data() {
     return {
       score: 0,
-      // user_id:1,
       dialog: false,
-      confirm: false
+      confirm: false,
+      hash: ''
     }
+  },
+  mounted() {
+    // this.hash = Math.random().toString(32).substring(2)
   },
   methods: {
     one: function () {
@@ -125,6 +130,7 @@ export default {
       // this.scoreを送る処理
       this.dialog = false;
       this.confirm = true;
+      console.log(this.hash);
       this.score = 0;
     },
     ok : function() {
@@ -132,6 +138,7 @@ export default {
     }
   },
   created: function() {
+    this.hash = Math.random().toString(32).substring(2)
   },
 }
 </script>

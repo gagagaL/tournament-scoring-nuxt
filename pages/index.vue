@@ -11,7 +11,7 @@
               outlined
               block
               elevation="20"
-              to="/grader"
+              to="/Grader"
             >採点ページ</v-btn>
           </p>
         <v-card-actions>
