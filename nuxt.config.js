@@ -38,7 +38,23 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    'nuxt-socket-io',
+    [
+      '@nuxtjs/firebase',
+      {
+        config: {
+          apiKey: 'AIzaSyBGks2_LWAl0QpHxqBzK0dPj6XYtakGrbg',
+          authDomain: 'score-601db.firebaseapp.com',
+          projectId: 'score-601db',
+          storageBucket: 'score-601db.appspot.com',
+          messagingSenderId: '97589736704',
+          appId: '1:97589736704:web:521a20b24ffff2f05aefe5',
+          measurementId: ""
+        },
+        services: {
+          auth: true // Just as example. Can be any other service.
+        }
+      }
+    ]
   ],
 
   io: {
