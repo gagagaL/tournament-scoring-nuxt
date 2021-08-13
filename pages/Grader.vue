@@ -130,7 +130,6 @@ export default {
       // this.scoreを送る処理
       this.dialog = false;
       this.confirm = true;
-      console.log(this.hash);
       this.score = 0;
     },
     ok : function() {
@@ -138,7 +137,6 @@ export default {
     }
   },
   created: function() {
-    this.hash = Math.random().toString(32).substring(2)
   },
 }
 </script>
