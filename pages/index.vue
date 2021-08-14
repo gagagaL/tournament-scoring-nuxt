@@ -11,9 +11,36 @@
               outlined
               block
               elevation="20"
-              to="/Grader"
-            >採点ページ</v-btn>
+              to="/Grader1"
+            >採点者No.1</v-btn>
           </p>
+        <p>
+          <v-btn
+            color="primary"
+            outlined
+            block
+            elevation="20"
+            to="/Grader2"
+          >採点者No.2</v-btn>
+        </p>
+        <p>
+          <v-btn
+            color="primary"
+            outlined
+            block
+            elevation="20"
+            to="/Grader3"
+          >採点者No.3</v-btn>
+        </p>
+        <p>
+          <v-btn
+            color="primary"
+            outlined
+            block
+            elevation="20"
+            to="/Grader4"
+          >採点者No.4</v-btn>
+        </p>
         <v-card-actions>
         </v-card-actions>
       </v-card>

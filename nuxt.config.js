@@ -25,6 +25,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~/plugin/firebase.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -51,7 +52,7 @@ export default {
           measurementId: ""
         },
         services: {
-          auth: true // Just as example. Can be any other service.
+          database: true // Just as example. Can be any other service.
         }
       }
     ]
@@ -78,5 +79,14 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    extend (config, ctx) {
+      config.module.rules.push({
+        test: /\.(ogg|mp3|wav|mpe?g)$/i,
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[ext]'
+        }
+      })
+    }
   }
 }
