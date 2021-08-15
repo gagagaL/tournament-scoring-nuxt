@@ -1,30 +1,31 @@
-<template style="background-color: #fdffcd">
-  <v-container>
+<template>
+  <div :style="{height: height + 'px'}" class="header-img">
+  <v-container fluid>
     <template v-if="sum === 0" >
-    <v-row class="text-center">
+    <v-row :style="{height: height + 'px'}" justify="center" align="center">
       <v-col cols="3" class="mb-3 text-center">
-        <h1 color="black">
+        <span style="font-size:180px">
           {{score_1}}
-        </h1>
+        </span>
       </v-col>
       <v-col cols="3" class="mb-3 text-center">
-        <h1>
+        <span style="font-size:180px">
           {{score_2}}
-        </h1>
+        </span>
       </v-col>
       <v-col cols="3" class="mb-3 text-center">
-        <h1>
+        <span style="font-size:180px">
           {{score_3}}
-        </h1>
+        </span>
       </v-col>
       <v-col cols="3" class="mb-3 text-center">
-        <h1>
+        <span style="font-size:180px">
           {{score_4}}
-        </h1>
+        </span>
       </v-col>
     </v-row>
   </template>
-    <v-row v-if="sum === 9" class="text-center">
+    <v-row v-if="sum === 9" class="text-center" justify="center">
     <v-col cols="12">
       <video
         autoplay
@@ -34,7 +35,7 @@
       </video>
     </v-col>
   </v-row>
-    <v-row v-if="sum === 8" class="text-center">
+    <v-row v-if="sum === 8" class="text-center" justify="center">
       <v-col cols="12">
         <video
           autoplay
@@ -44,7 +45,7 @@
         </video>
       </v-col>
     </v-row>
-    <v-row v-if="sum === 1" class="text-center">
+    <v-row v-if="sum === 1" class="text-center" justify="center">
       <v-col cols="12">
         <video
           autoplay
@@ -54,7 +55,7 @@
         </video>
       </v-col>
     </v-row>
-    <v-row v-if="sum === 2" class="text-center">
+    <v-row v-if="sum === 2" class="text-center" justify="center">
       <v-col cols="12">
         <video
           autoplay
@@ -64,7 +65,7 @@
         </video>
       </v-col>
     </v-row>
-    <v-row v-if="sum === 3" class="text-center">
+    <v-row v-if="sum === 3" class="text-center" justify="center">
       <v-col cols="12">
         <video
           autoplay
@@ -74,7 +75,7 @@
         </video>
       </v-col>
     </v-row>
-    <v-row v-if="sum === 4" class="text-center">
+    <v-row v-if="sum === 4" class="text-center" justify="center">
       <v-col cols="12">
         <video
           autoplay
@@ -84,7 +85,7 @@
         </video>
       </v-col>
     </v-row>
-    <v-row v-if="sum === 6" class="text-center">
+    <v-row v-if="sum === 6" class="text-center" justify="center">
       <v-col cols="12">
         <video
           autoplay
@@ -94,7 +95,7 @@
         </video>
       </v-col>
     </v-row>
-    <v-row v-if="sum === 12" class="text-center">
+    <v-row v-if="sum === 12" class="text-center" justify="center">
       <v-col cols="12">
         <video
           autoplay
@@ -104,7 +105,7 @@
         </video>
       </v-col>
     </v-row>
-    <v-row v-if="sum === 16" class="text-center">
+    <v-row v-if="sum === 16" class="text-center" justify="center">
       <v-col cols="12">
         <video
           autoplay
@@ -114,7 +115,7 @@
         </video>
       </v-col>
     </v-row>
-    <v-row v-if="sum === 18" class="text-center">
+    <v-row v-if="sum === 18" class="text-center" justify="center">
       <v-col cols="12">
         <video
           autoplay
@@ -124,7 +125,7 @@
         </video>
       </v-col>
     </v-row>
-    <v-row v-if="sum === 24" class="text-center">
+    <v-row v-if="sum === 24" class="text-center" justify="center">
       <v-col cols="12">
         <video
           autoplay
@@ -134,7 +135,7 @@
         </video>
       </v-col>
     </v-row>
-    <v-row v-if="sum === 27" class="text-center">
+    <v-row v-if="sum === 27" class="text-center" justify="center">
       <v-col cols="12">
         <video
           autoplay
@@ -144,7 +145,7 @@
         </video>
       </v-col>
     </v-row>
-    <v-row v-if="sum === 36" class="text-center">
+    <v-row v-if="sum === 36" class="text-center" justify="center">
       <v-col cols="12">
         <video
           autoplay
@@ -154,7 +155,7 @@
         </video>
       </v-col>
     </v-row>
-    <v-row v-if="sum === 54" class="text-center">
+    <v-row v-if="sum === 54" class="text-center" justify="center">
       <v-col cols="12">
         <video
           autoplay
@@ -164,11 +165,11 @@
         </video>
       </v-col>
     </v-row>
-    <v-row v-if="sum === 81" :key="sum">
+    <v-row v-if="sum === 81" :key="sum" justify="center">
       <v-col align="center">
         <video
           autoplay
-          src='81.mp4'
+          src="81.mp4"
           width="1200"
           ref="previewVideo"
         >
@@ -176,6 +177,7 @@
       </v-col>
     </v-row>
   </v-container>
+  </div>
 </template>
 <script>
 export default {
@@ -187,10 +189,23 @@ export default {
       score_4: 0,
       sum:0,
       // user_id:1,
-      dialog: false
+      dialog: false,
+      height: 0
+    }
+  },
+  created () {
+    if (process.client) {
+      window.addEventListener('resize', this.handleResize)
+      this.handleResize()
+    }
+  },
+  destroyed () {
+    if (process.client) {
+      window.removeEventListener('resize', this.handleResize)
     }
   },
   mounted() {
+    console.log(this.height)
     // const previewVideo = ref()
     this.$fire.database.ref('result1').on('value', (snapshot) => {
       this.score_1 = snapshot.val();
@@ -213,6 +228,9 @@ export default {
     cul: function() {
       this.sum = this.score_1 * this.score_2 * this.score_3 * this.score_4
       // previewVideo.load();
+    },
+    handleResize () {
+      this.height = window.innerHeight
     }
   }
 }

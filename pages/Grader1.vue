@@ -1,5 +1,5 @@
 <template>
-  <v-row justify="center" align="center">
+  <v-row>
     <v-col cols="12" sm="8" md="6">
       <v-card>
         <v-card-title class="headline text-lg-center">
@@ -37,7 +37,7 @@
             @click="three"
           >3</v-btn>
         </p>
-        <p>
+        <p  v-if="score > 0">
         <v-btn
           class="mt-10"
           color="danger"
