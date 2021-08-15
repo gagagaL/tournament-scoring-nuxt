@@ -1,32 +1,32 @@
 <template style="background-color: #fdffcd">
   <v-container>
     <template>
-      <v-row class="text-center">
+      <v-row class="text-center mt-16">
         <v-col cols="3" class="mb-3 text-center">
-          <h1 color="black">
+          <span style="font-size:50px">
             {{score_1}}
-          </h1>
+          </span>
         </v-col>
         <v-col cols="3" class="mb-3 text-center">
-          <h1>
+          <span style="font-size:50px">
             {{score_2}}
-          </h1>
+          </span>
         </v-col>
         <v-col cols="3" class="mb-3 text-center">
-          <h1>
+          <span style="font-size:50px">
             {{score_3}}
-          </h1>
+          </span>
         </v-col>
         <v-col cols="3" class="mb-3 text-center">
-          <h1>
+          <span style="font-size:50px">
             {{score_4}}
-          </h1>
+          </span>
         </v-col>
       </v-row>
       <v-row>
-        <h1>
+        <span style="font-size:100px">
           合計{{sum}}
-        </h1>
+        </span>
       </v-row>
       <v-col cols="2" sm="2" md="2">
         <p>
