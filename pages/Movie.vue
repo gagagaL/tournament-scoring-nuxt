@@ -1,9 +1,9 @@
-<template>
+<template style="background-color: #fdffcd">
   <v-container>
     <template v-if="sum === 0" >
     <v-row class="text-center">
       <v-col cols="3" class="mb-3 text-center">
-        <h1>
+        <h1 color="black">
           {{score_1}}
         </h1>
       </v-col>
@@ -24,12 +24,156 @@
       </v-col>
     </v-row>
   </template>
-    <v-row v-if="sum === 0" class="text-center">
+    <v-row v-if="sum === 9" class="text-center">
+    <v-col cols="12">
       <video
         autoplay
-        src="~/assets/81.mov"
+        src='9.mp4'
+        width="1200"
       >
       </video>
+    </v-col>
+  </v-row>
+    <v-row v-if="sum === 8" class="text-center">
+      <v-col cols="12">
+        <video
+          autoplay
+          src='8.mp4'
+          width="1200"
+        >
+        </video>
+      </v-col>
+    </v-row>
+    <v-row v-if="sum === 1" class="text-center">
+      <v-col cols="12">
+        <video
+          autoplay
+          src='1.mp4'
+          width="1200"
+        >
+        </video>
+      </v-col>
+    </v-row>
+    <v-row v-if="sum === 2" class="text-center">
+      <v-col cols="12">
+        <video
+          autoplay
+          src='2.mp4'
+          width="1200"
+        >
+        </video>
+      </v-col>
+    </v-row>
+    <v-row v-if="sum === 3" class="text-center">
+      <v-col cols="12">
+        <video
+          autoplay
+          src='3.mp4'
+          width="1200"
+        >
+        </video>
+      </v-col>
+    </v-row>
+    <v-row v-if="sum === 4" class="text-center">
+      <v-col cols="12">
+        <video
+          autoplay
+          src='4.mp4'
+          width="1200"
+        >
+        </video>
+      </v-col>
+    </v-row>
+    <v-row v-if="sum === 6" class="text-center">
+      <v-col cols="12">
+        <video
+          autoplay
+          src='6.mp4'
+          width="1200"
+        >
+        </video>
+      </v-col>
+    </v-row>
+    <v-row v-if="sum === 12" class="text-center">
+      <v-col cols="12">
+        <video
+          autoplay
+          src='12.mp4'
+          width="1200"
+        >
+        </video>
+      </v-col>
+    </v-row>
+    <v-row v-if="sum === 16" class="text-center">
+      <v-col cols="12">
+        <video
+          autoplay
+          src='16.mp4'
+          width="1200"
+        >
+        </video>
+      </v-col>
+    </v-row>
+    <v-row v-if="sum === 18" class="text-center">
+      <v-col cols="12">
+        <video
+          autoplay
+          src='18.mp4'
+          width="1200"
+        >
+        </video>
+      </v-col>
+    </v-row>
+    <v-row v-if="sum === 24" class="text-center">
+      <v-col cols="12">
+        <video
+          autoplay
+          src='24.mp4'
+          width="1200"
+        >
+        </video>
+      </v-col>
+    </v-row>
+    <v-row v-if="sum === 27" class="text-center">
+      <v-col cols="12">
+        <video
+          autoplay
+          src='27.mp4'
+          width="1200"
+        >
+        </video>
+      </v-col>
+    </v-row>
+    <v-row v-if="sum === 36" class="text-center">
+      <v-col cols="12">
+        <video
+          autoplay
+          src='36.mp4'
+          width="1200"
+        >
+        </video>
+      </v-col>
+    </v-row>
+    <v-row v-if="sum === 54" class="text-center">
+      <v-col cols="12">
+        <video
+          autoplay
+          src='54.mp4'
+          width="1200"
+        >
+        </video>
+      </v-col>
+    </v-row>
+    <v-row v-if="sum === 81" :key="sum">
+      <v-col align="center">
+        <video
+          autoplay
+          src='81.mp4'
+          width="1200"
+          ref="previewVideo"
+        >
+        </video>
+      </v-col>
     </v-row>
   </v-container>
 </template>
@@ -47,6 +191,7 @@ export default {
     }
   },
   mounted() {
+    // const previewVideo = ref()
     this.$fire.database.ref('result1').on('value', (snapshot) => {
       this.score_1 = snapshot.val();
       this.cul()
@@ -67,6 +212,7 @@ export default {
   methods: {
     cul: function() {
       this.sum = this.score_1 * this.score_2 * this.score_3 * this.score_4
+      // previewVideo.load();
     }
   }
 }

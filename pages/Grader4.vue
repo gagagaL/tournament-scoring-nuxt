@@ -109,7 +109,7 @@ export default {
       score: 0,
       dialog: false,
       confirm: false,
-      resutl4:0
+      result4:0
     }
   },
   mounted() {
@@ -126,7 +126,7 @@ export default {
     },
     sent: function() {
       this.$fire.database.ref('result4').set(
-        this.resutl4 = this.score
+        this.result4 = this.score
       )
       this.dialog = false;
       this.confirm = true;
