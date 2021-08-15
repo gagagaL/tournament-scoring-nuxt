@@ -37,7 +37,7 @@
             @click="three"
           >3</v-btn>
         </p>
-        <p>
+        <p v-if="score > 0">
           <v-btn
             class="mt-10"
             color="danger"
