@@ -24,7 +24,7 @@
         </v-col>
       </v-row>
       <v-row>
-        <span style="font-size:100px">
+        <span style="font-size:100px;color:#d24949">
           合計{{sum}}
         </span>
       </v-row>

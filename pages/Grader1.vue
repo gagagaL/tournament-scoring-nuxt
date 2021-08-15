@@ -87,7 +87,6 @@
           <v-card-title class="text-h5">
             送信しました
           </v-card-title>
-
           <v-card-actions>
             <v-spacer></v-spacer>
             <v-btn
