@@ -4,22 +4,34 @@
     <template v-if="sum === 0" >
     <v-row :style="{height: height + 'px'}" justify="center" align="center">
       <v-col cols="3" class="mb-3 text-center">
-        <span style="font-size:180px">
+          <span v-if="score_1 === 0" style="font-size:180px">
+          --
+        </span>
+        <span v-else style="font-size:180px">
           {{score_1}}
         </span>
       </v-col>
       <v-col cols="3" class="mb-3 text-center">
-        <span style="font-size:180px">
+        <span v-if="score_2 === 0" style="font-size:180px">
+          --
+        </span>
+        <span v-else style="font-size:180px">
           {{score_2}}
         </span>
       </v-col>
       <v-col cols="3" class="mb-3 text-center">
-        <span style="font-size:180px">
+        <span v-if="score_3 === 0" style="font-size:180px">
+          --
+        </span>
+        <span v-else style="font-size:180px">
           {{score_3}}
         </span>
       </v-col>
       <v-col cols="3" class="mb-3 text-center">
-        <span style="font-size:180px">
+        <span v-if="score_4 === 0" style="font-size:180px">
+          --
+        </span>
+        <span v-else style="font-size:180px">
           {{score_4}}
         </span>
       </v-col>
