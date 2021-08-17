@@ -43,12 +43,12 @@ export default {
       '@nuxtjs/firebase',
       {
         config: {
-          apiKey: 'AIzaSyBGks2_LWAl0QpHxqBzK0dPj6XYtakGrbg',
-          authDomain: 'score-601db.firebaseapp.com',
-          projectId: 'score-601db',
-          storageBucket: 'score-601db.appspot.com',
-          messagingSenderId: '97589736704',
-          appId: '1:97589736704:web:521a20b24ffff2f05aefe5',
+          apiKey: '',
+          authDomain: '',
+          projectId: '',
+          storageBucket: '',
+          messagingSenderId: '',
+          appId: '',
           measurementId: ""
         },
         services: {

@@ -23,5 +23,5 @@ $ npm run generate
 # node -v
 v14.0.0
 ```
-nuxt-socket-ioについて  
-https://github.com/richardeschloss/nuxt-socket-io#readme
+nuxt.config.jsにfirebase realtime databaseのデータを入力する
+.envで管理する方向

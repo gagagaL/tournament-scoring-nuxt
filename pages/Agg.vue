@@ -56,7 +56,6 @@ export default {
     }
   },
   mounted() {
-    // const previewVideo = ref()
     this.$fire.database.ref('result1').on('value', (snapshot) => {
       this.score_1 = snapshot.val();
       this.cul()
